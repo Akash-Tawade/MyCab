@@ -1,0 +1,38 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') 
+	   {
+            steps{
+		git credentialsId: 'ab6b68c9-6ef1-426f-a749-ce716942c58a', url: 'https://github.com/Akash-Tawade/MyCab.git'
+                echo 'Checkout done'
+		}
+            }
+        stage('Build') {
+            steps {
+		git credentialsId: 'ab6b68c9-6ef1-426f-a749-ce716942c58a', url: 'https://github.com/Akash-Tawade/MyCab.git'
+                echo 'Build done'
+		}
+            }
+        stage('Test') {
+            steps {
+		git credentialsId: 'ab6b68c9-6ef1-426f-a749-ce716942c58a', url: 'https://github.com/Akash-Tawade/MyCab.git'
+                echo 'Test done'
+		}
+            }
+        stage('QA deploy') {
+            steps {
+		git credentialsId: 'ab6b68c9-6ef1-426f-a749-ce716942c58a', url: 'https://github.com/Akash-Tawade/MyCab.git'
+                echo 'QA deploy done'
+		}
+            }
+	stage('Prod deploy') {
+            steps {
+		git credentialsId: 'ab6b68c9-6ef1-426f-a749-ce716942c58a', url: 'https://github.com/Akash-Tawade/MyCab.git'
+                echo 'Prod deploy done'
+            }
+        }
+    }
+
+}
